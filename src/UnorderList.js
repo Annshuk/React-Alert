@@ -3,6 +3,8 @@ import { useSpring, animated } from 'react-spring';
 
 const UnorderList = () => {
   const [styles, api] = useSpring(() => ({ opacity: 1 }));
+  // Update spring with new props
+  api.start({ opacity: toggle ? 1 : 0 });
 
   return (
     <animated.div style={styles}>
